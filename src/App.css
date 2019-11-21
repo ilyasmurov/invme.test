@@ -1,22 +1,64 @@
-.App {
-  text-align: center;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
+.header-sticky {
+  position: sticky;
+  height: 80px;
+  background-color: whitesmoke;
+  z-index: 1000;
+  top: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-sticky input {
+  border: 0;
+  padding: 0 10px;
+}
+.artwork {
+  height: 200px;
+  background-color: gainsboro;
+}
+.private-container {
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1;
+
+  overflow-y: auto;
+  position: relative;
+}
+
+.list-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.list-row > div {
+  flex: 1;
+  background-color: lightyellow;
+}
+
+div.list-row:nth-of-type(2n + 1) > div:nth-last-of-type(2n + 1) {
+  background-color: #fff;
+}
+div.list-row:nth-of-type(2n) > div:nth-last-of-type(2n) {
+  background-color: #fff;
+}
+
+.ReactVirtualized__Grid.ReactVirtualized__List {
+  outline: none;
 }
